@@ -1,0 +1,36 @@
+<!--? Скрытие навигационной полосы header при прокрутке вниз-->
+<!--? Добавитть в файле header.htm id="navbar" (<header id="navbar" data-lp class="header">)-->
+<!--? Прокрутка при открытом меню бургера код лежит в файле script.js-->
+
+<header id="navbar" class="header">
+	<div class="header__container _container">
+		<div class="header__content">
+			<!--? вариант с картинкой
+			<a href="" class="header__logo"><img src="@img/header/logo.svg" alt="logo"></a>
+			-->
+			<!--? вариант с написанием логотипа по месту-->
+			<a href="" class="header__logos">LSL</a>
+			<div class="header__menu menu">
+				<div class="menu__icon icon-menu">
+					<span></span>
+				</div>
+				<nav class="menu__body">
+					<ul class="menu__list">
+						<!--? time 26:00 смотрим https://www.youtube.com/watch?v=zs1r8yafTE8-->
+						<!--? для плавного перехода по ссылкам создадим класс data-goto-->
+						<!--? ЧИАТАЕМ ДОКУМЕНТАЦИЮ ЧЕРТОГОВ ВНИМАТЕЛЬНО.txt-->
+						<!--? Раскоментировать в файле app.js пункты 153 и 159.txt-->
+						<li><a data-goto-header data-goto=".about" href="#" class="menu__link">Home</a></li>
+						<li><a data-goto-header data-goto=".about" href="#" class="menu__link">About</a></li>
+						<li><a data-goto-header data-goto=".services" href="#" class="menu__link">Servicing</a></li>
+						<li><a data-goto-header data-goto=".works_3" href="#" class="menu__link">Portfolio</a></li>
+						<li><a data-goto-header data-goto=".blog" href="#" class="menu__link">Blog</a></li>
+						<li><a data-goto-header data-goto=".contact" href="#" class="menu__link">Contact us</a></li>
+						<li><a href="#" class="menu__link _icon-internet"></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!--<a href="#" class="menu__link _icon-internet"></a>-->
+	</div>
+</header>

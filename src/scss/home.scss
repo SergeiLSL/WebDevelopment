@@ -1,0 +1,999 @@
+//=============================================
+// start main-block
+.inet {
+	color: #fff;
+	font-weight: 500;
+	line-height: math.div(84, 72);
+	&__container {
+		margin: 0 auto;
+	}
+	// .inet__content
+	&__content {
+		position: relative;
+		img {
+			vertical-align: middle;
+			width: 100%;
+			flex: 1 0 100%;
+			/*разрешаем увеличиваться и запрещаем уменьшаться картитнке*/
+		}
+	}
+	// .inet__text
+	&__text {
+		position: absolute;
+		//background: rgba(0, 0, 0, 0);
+		width: 100%;
+		left: 50%;
+		top: 41%;
+		transform: translate(-50%, -41%);
+	}
+	&__title {
+		text-align: center;
+		font-size: rem(60);
+		font-weight: 600;
+		//line-height: rem(22);
+		//margin-bottom: rem(55);
+		line-height: math.div(45, 22);
+		letter-spacing: 0.05em;
+		@include adaptiveValue("font-size", 60, 20);
+	}
+	&__subtitle {
+		text-align: center;
+		font-size: rem(22);
+		line-height: math.div(22, 22);
+		letter-spacing: 0.05em;
+		@include adaptiveValue("font-size", 22, 10);
+	}
+	// .inet__buttons
+	&__buttons {
+		display: flex;
+		gap: rem(25);
+		position: absolute;
+		width: 100%;
+		left: 50%;
+		bottom: 27%;
+		transform: translate(-50%, 27%);
+		justify-content: center;
+		@media (max-width: $mobile) {
+			bottom: 20%;
+		}
+		@media (max-width: $mobileSmall) {
+			@include adaptiveValue("gap", 25, 15);
+			bottom: 12%;
+		}
+	}
+
+	// .inet__item
+	&__item {
+	}
+	// .inet__button
+	&__button {
+		border: rem(2) solid $mainColorWhite;
+		background: rgba(0, 0, 0, 0); /* Black background with 0.5 opacity */
+		color: $mainColorWhite;
+		margin: 0 auto;
+		&:hover {
+			background-color: $mainColorGreen;
+			border: rem(2) solid $mainColorGreen;
+			color: $mainColorWhite;
+			padding: rem(14) rem(20);
+		}
+		@include adaptiveValue("font-size", 20, 10);
+		@media (max-width: $mobileSmall) {
+		}
+	}
+}
+
+// finish main-block
+//=============================================
+//====================================================================================================
+// start about
+.about {
+	background-color: #fff;
+	@include adaptiveValue("padding-top", 125, 30);
+	@include adaptiveValue("padding-bottom", 125, 30);
+	// .about__container
+	&__container {
+		//background-color: #f8fced; // не забыть убрать
+	}
+	// .about__content
+	&__content {
+		color: $mainColorText;
+	}
+	&__header {
+		@include adaptiveValue("margin-bottom", 124, 30);
+	}
+	// .about__title
+	&__title {
+	}
+	// .about__desc
+	&__desc {
+	}
+	// .about__body
+	&__body {
+	}
+	// .about__row
+	&__row {
+		//margin: 0 rem(-15);
+		@include adaptiveValue("row-gap", 50, 60);
+	}
+	// .about__column
+	&__column {
+	}
+	// .about__item
+	&__item {
+		//background-color: #7fc2b7;
+		display: block;
+		max-width: rem(370);
+		margin: 0 auto;
+	}
+	// .about__icon
+	&__icon {
+		font-size: rem(62);
+		text-align: center;
+		margin: 0 0 rem(39) 0;
+	}
+	// .about__subtitle
+	&__subtitle {
+		font-size: rem(20);
+		line-height: math.div(22, 20);
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		text-align: center;
+		margin: 0 0 rem(21) 0;
+	}
+	// .about__text
+	&__text {
+		text-align: center;
+		font-size: rem(15);
+		line-height: rem(25);
+		letter-spacing: 0.05em;
+		@include adaptiveValue("padding-left", 49, 15);
+		@include adaptiveValue("padding-right", 49, 15);
+	}
+}
+// finish about
+//=============================================
+//=============================================
+// start services
+.services {
+	background-color: $mainColorBlock;
+	@include adaptiveValue("padding-top", 173, 20);
+	@include adaptiveValue("padding-bottom", 126, 20);
+	// .prices__container
+	&__container {
+		//background-color: #f8fced; // не забыть убрать
+	}
+	&__content {
+		color: $mainColorText;
+	}
+	&__begins {
+		@include adaptiveValue("margin-bottom", 112, 20);
+	}
+	// .price__title
+	&__title {
+	}
+	// .price__desc
+	&__desc {
+	}
+	&__servic {
+	}
+}
+
+.servic {
+	&__row {
+		margin: 0 rem(-15);
+	}
+	&__column {
+		//max-width: rem(400);
+		//position: relative;
+		//flex: 0 1 33.333%;
+		/*запрещаем увеличиваться, разрешем уменьшаться, устанвливаем одинаковую ширину*/
+		//display: flex;
+		/*колонки становятся одинаковые по высоте - по самой высокой*/
+		/*отступ между блоками по вертикали*/
+		//margin: 0px auto 30px auto;
+		margin-bottom: rem(30);
+		@media (max-width: $tablet) {
+			flex: 1 1 100%;
+		}
+	}
+	&__item {
+		text-align: center;
+		letter-spacing: 0.05em;
+		background-color: #ffffff;
+		/*закрашиваем карточку*/
+		color: $mainColorText;
+		/*буквы белые*/
+		padding: 0 0 rem(48) 0;
+		@include adaptiveValue("padding-bottom", 48, 25);
+		/*чтобы ниже кнопки был промежуток*/
+		display: flex;
+		/*эти две строки чтобы прибить кнопку к низу и еще позволим блоку с текстом увеличиваться flex: 1 1 auto*/
+		flex-direction: column;
+		/*переварачиваем все элементы*/
+		transition: background-color 0.5s ease 0s;
+		&:hover {
+			box-shadow: 0 rem(10) rem(20) 0 rgba(0, 0, 0, 0.34);
+			background-color: $mainColorGreen;
+			color: #fff;
+			.servic__icon {
+				color: #fff;
+			}
+		}
+	}
+	&__icon {
+		color: $mainColorBlue;
+		font-size: rem(62);
+		@include adaptiveValue("margin-top", 58, 35);
+		@include adaptiveValue("margin-bottom", 38, 20);
+	}
+	&__title {
+		font-size: rem(20);
+		line-height: math.div(22, 20);
+		font-weight: 600;
+		@include adaptiveValue("margin-bottom", 26, 13);
+	}
+	&__text {
+		font-size: rem(15);
+		line-height: math.div(25, 15);
+		flex: 1 1 auto;
+		/*чтобы прибить кнопку к низу позволим блоку с текстом увеличиваться*/
+		/*отступы слева/справа*/
+		@include adaptiveValue("padding-left", 49, 15);
+		@include adaptiveValue("padding-right", 49, 15);
+		@include adaptiveValue("margin-bottom", 45, 25);
+	}
+	&__button {
+		border: rem(2) solid $mainColorBlue;
+		color: $mainColorBlue;
+		&:hover {
+			background-color: $mainColorGreen;
+			color: #fff;
+		}
+	}
+}
+//finish services
+//=============================================
+//=============================================
+// start works
+.works {
+	background-color: $mainColorWhite;
+	@include adaptiveValue("padding-top", 123, 30);
+	@include adaptiveValue("padding-bottom", 123, 30);
+	// .team__container
+	&__container {
+		//background-color: #f8fced; // не забыть убрать
+	}
+	// .team__content
+	&__content {
+		color: $mainColorText;
+	}
+	&__header {
+		@include adaptiveValue("margin-bottom", 127, 30);
+	}
+	// .team__title
+	&__title {
+	}
+	// .team__desc
+	&__desc {
+	}
+	&__buttons {
+		display: flex;
+		margin: 0 auto rem(119) auto;
+		@include adaptiveValue("margin-bottom", 119, 40);
+		gap: rem(20);
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	// .team__items
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		//@include adaptiveValue("row-gap", 40, 60);
+		margin: 0 rem(-15);
+	}
+	// .team__column
+	&__column {
+		padding: 0;
+		position: relative;
+		padding: 0 rem(15);
+	}
+	// .works__footer
+	&__footer-button {
+		@include adaptiveValue("margin-top", 99, 40);
+		display: flex;
+		justify-content: center;
+		&_f {
+			padding: rem(22) rem(62) rem(22) rem(62);
+		}
+	}
+	// .team__item
+	&__block {
+	}
+}
+
+.block-works {
+	position: relative;
+	width: 100%;
+	&:hover {
+		.block-works__image {
+			opacity: 0.3;
+		}
+		.block-works__middle {
+			opacity: 1;
+		}
+	}
+	// .block-works__image
+	&__image {
+		opacity: 1;
+		display: block;
+		width: 100%;
+		height: auto;
+		transition: 0.5s ease;
+		backface-visibility: hidden;
+		position: relative;
+		@include adaptiveValue("margin-bottom", 30, 10);
+	}
+	// .block-works__middle
+	&__middle {
+		transition: 0.5s ease;
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+		padding-top: 45%;
+		color: #f1f1f1;
+		width: 100%;
+		height: 100%;
+	}
+
+	// .block-works__title
+	&__title {
+		font-size: 20px;
+		line-height: math.div(22, 20);
+		font-weight: 600;
+		letter-spacing: 0.05em;
+	}
+	// .item__text_1
+	&__design {
+		font-size: 15px;
+		line-height: math.div(22, 15);
+		margin-top: rem(5);
+	}
+}
+// finish works
+//=============================================
+//=======================================
+// start price
+.price {
+	background-color: rgba(6,12,11,0.1);
+	//background-color: rgba(249, 251, 253, 0.9);
+	@include adaptiveValue("padding-top", 127, 50);
+	@include adaptiveValue("padding-bottom", 95, 30);
+	&__container {
+		margin: 0 auto;
+		//background-color: #f8fced; // не забыть убрать
+	}
+	// .price__content
+	&__content {
+		margin: 0 auto;
+		color: $mainColorText;
+	}
+	&__header {
+		@include adaptiveValue("margin-bottom", 127, 30);
+	}
+	// .price__title
+	&__title {
+	}
+	// .price__desc
+	&__desc {
+	}
+	&__prices {
+	}
+}
+
+.prices {
+	// .prices__row
+	&__row {
+		display: flex;
+		margin: 0 rem(-15);
+		flex-wrap: wrap;
+	}
+	// .prices__column
+	&__column {
+		margin-bottom: rem(30);
+		flex-direction: column;
+		//background-color: #fff;
+		color: $mainColorText;
+		margin: 0 auto;
+		padding: 0 rem(15);
+
+		@media (max-width: $tablet) {
+			//flex: 0 1 50%;
+		}
+		@media (max-width: $mobile) {
+			flex: 1 1 60%;
+			//padding: 0 rem(130);
+			@include adaptiveValue("padding-left", 240, 15);
+			@include adaptiveValue("padding-right", 240, 15);
+		}
+	}
+	// .prices__item
+	&__item {
+		background-color: #fff;
+		color: $mainColorText;
+		margin-bottom: rem(30);
+		/*чтобы ниже кнопки был промежуток*/
+		//padding: 0 0 rem(63) 0;
+		//@include adaptiveValue("padding-bottom", 63, 15);
+		/*переварачиваем все элементы*/
+		text-align: center;
+	}
+	// .prices__card
+	&__card {
+	}
+	// .prices__terms
+	&__terms {
+		@include adaptiveValue("padding-left", 96, 15);
+		@include adaptiveValue("padding-right", 96, 15);
+	}
+	// .prices__button
+	&__button {
+		border: rem(2) solid #000;
+		padding: rem(17) rem(28);
+		@include adaptiveValue("margin-top", 67, 35);
+		@include adaptiveValue("margin-bottom", 63, 25);
+	}
+}
+
+.card {
+	position: relative;
+	background-color: $mainColorBlue;
+	font-size: rem(25);
+	line-height: 22px; //====================================
+	letter-spacing: 0.05em;
+	padding: rem(45) 0px rem(62) 0px;
+	overflow: hidden;
+	z-index: 2;
+	// .card__subtitle
+	&__subtitle {
+		font-size: rem(25);
+		line-height: 22px; //======================================
+		letter-spacing: 0.05em;
+		color: #fff;
+		margin: 0 0 rem(39) 0;
+		@include adaptiveValue("margin-bottom", 39, 20);
+	}
+	// .card__payment
+	&__payment {
+	}
+}
+
+.payment {
+	font-size: rem(25);
+	line-height: 22px; //======================================
+	letter-spacing: 0.05em;
+	color: #fff;
+	// .payment__row
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		//margin: 0 rem(91);
+		//@include adaptiveValue("margin-left", 91, 15);
+		//@include adaptiveValue("margin-right", 91, 15);
+	}
+	// .payment__column
+	&__column {
+		// .payment__column_1
+		&_1 {
+			font-size: rem(25);
+			align-self: flex-start;
+		}
+		// .payment__column_2
+		&_2 {
+			font-size: rem(50);
+			padding: rem(8) rem(10) rem(10) rem(7);
+		}
+		// .payment__column_3
+		&_3 {
+			align-self: flex-end;
+			font-size: rem(17);
+			padding: 0px 0px 0px 0px;
+		}
+	}
+	// .payment__item
+	&__item {
+		color: #fff;
+		text-align: center;
+	}
+	&__figure {
+		display: flex;
+		position: absolute;
+		right: 0;
+		bottom: rem(-2);
+	}
+	&__triangle {
+		//width: rem(0);
+		//height: rem(0);
+		//border-top: rem(31.5) solid transparent;
+		//border-left: rem(370) solid transparent;
+		//border-bottom: rem(31.5) solid #fff;
+		border-bottom: 36px solid #fff;
+		border-left: 390px solid transparent;
+		@media (max-width: $tablet) {
+			border-bottom: 36px solid #fff;
+			border-left: 450px solid transparent;
+		}
+		@media (max-width: $mobile) {
+			border-bottom: 36px solid #fff;
+			border-left: 450px solid transparent;
+		}
+	}
+}
+
+.terms {
+	// .terms__text
+	&__text {
+		margin: 0 auto;
+		max-width: rem(178);
+		border-bottom: 1px solid #000;
+		padding: rem(36) 0px rem(10) 0px;
+		@include adaptiveValue("padding-top", 36, 15);
+		&:first-child {
+			padding: rem(49) 0px rem(10) 0px;
+			@include adaptiveValue("padding-top", 49, 20);
+		}
+	}
+}
+// finish price
+//===========price==============================
+//=============================================
+// start team
+.team {
+	background-color: $mainColorWhite;
+	@include adaptiveValue("padding-top", 123, 30);
+	@include adaptiveValue("padding-bottom", 123, 30);
+	// .team__container
+	&__container {
+		//background-color: #f8fced; // не забыть убрать
+	}
+	// .team__content
+	&__content {
+		color: $mainColorText;
+	}
+	&__header {
+		@include adaptiveValue("margin-bottom", 127, 30);
+	}
+	// .team__title
+	&__title {
+	}
+	// .team__desc
+	&__desc {
+	}
+	// .team__items
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		@include adaptiveValue("row-gap", 40, 60);
+		margin: 0 rem(-15);
+	}
+	// .team__column
+	&__column {
+		padding: 0;
+		position: relative;
+		padding: 0 rem(15);
+		//flex: 0 1 33.333%;
+		@media (max-width: $tablet) {
+			//flex: 0 1 50%;
+		}
+	}
+	// .team__item
+	&__item {
+	}
+}
+
+.item-team {
+	height: 100%; // чтобы карточки были одной высоты независимо от количества текста
+	//position: relative;
+	z-index: 2;
+	border-radius: rem(8);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	// .item-team__icon
+	&__image {
+		//max-width: 100%;
+		position: relative;
+		margin: 0 0 rem(30) 0;
+		img {
+			max-width: 100%;
+			border-radius: rem(10);
+		}
+	}
+
+	// .item-team__name
+	&__name {
+		font-size: rem(20);
+		line-height: rem(22);
+		font-weight: 600;
+		margin: 0 0 rem(6) 0;
+	}
+	// .item-team__position
+	&__position {
+		font-size: rem(15);
+		line-height: rem(22);
+		margin: 0 0 rem(27) 0;
+		@include adaptiveValue("margin-bottom", 27, 5);
+	}
+	// .item-team__socials
+	&__socials {
+	}
+	// .item-team__link
+	&__link {
+		font-size: rem(30);
+		display: inline-block;
+		width: rem(50);
+		padding: rem(10) 0;
+		color: $mainColorGreen;
+		background-color: #f0f1f1;
+		border-radius: 10px;
+		&:not(:last-child) {
+			margin: 0 rem(26) 0 0;
+			transition: all 0.3s ease 0s;
+			@include adaptiveValue("margin-right", 26, 10);
+		}
+		&:hover {
+			background-color: $mainColorBlue;
+			color: #fff;
+		}
+	}
+}
+// финиш team
+//================================================
+//================================================
+// start blog
+.blog {
+	background-color: $mainColorBlock;
+	@include adaptiveValue("padding-top", 125, 30);
+	@include adaptiveValue("padding-bottom", 125, 30);
+	// .blog__container
+	&__container {
+		//background-color: #f8fced; // не забыть убрать
+	}
+	// .blog____content
+	&__content {
+		color: $mainColorText;
+	}
+	// .blog__header
+	&__header {
+		@include adaptiveValue("margin-bottom", 127, 30);
+	}
+	// .blog__title
+	&__title {
+	}
+	// .blog__desc
+	&__desc {
+	}
+	// .blog__block
+	&__block {
+		justify-content: center;
+		text-align: center;
+	}
+	// .blog__row
+	&__row {
+		//display: flex;
+		//flex-wrap: wrap;
+		//justify-content: center;
+		//margin: 0 rem(-15);
+	}
+	// .blog__column
+	&__column {
+		position: relative;
+		padding: 0 rem(15);
+		flex: 0 1 50%;
+		/*запрещаем увеличиваться, разрешем уменьшаться, устанвливаем одинаковую ширину*/
+		margin: 0 auto;
+		text-align: center;
+		@media (max-width: $tablet) {
+			flex: 1 1 100%;
+			&_1 {
+				order: 1;
+				margin-top: rem(15);
+			}
+			&_2 {
+				order: 2;
+				margin-bottom: rem(65);
+			}
+			&_3 {
+				order: 4;
+				margin-bottom: rem(65);
+			}
+			&_4 {
+				order: 3;
+			}
+			&_5 {
+				order: 5;
+			}
+			&_6 {
+				order: 6;
+			}
+		}
+	}
+	// .blog__footer-button
+	&__footer-button {
+		@include adaptiveValue("margin-top", 95, 65);
+		display: flex;
+		justify-content: center;
+	}
+	// .blog__button_f
+	&__button_f {
+		padding: rem(25) rem(62) rem(25) rem(62);
+	}
+}
+
+.items {
+	max-width: rem(570);
+	//justify-content: center;
+	margin: 0 auto;
+	// .items__image
+	&__image {
+		position: relative;
+		img {
+			max-width: 100%;
+		}
+	}
+	// .items__seo
+	&__seo {
+		color: $mainColorText;
+	}
+	// .items__title
+	&__title {
+		//font-size: rem(25);
+		letter-spacing: 0.05;
+		font-weight: 600;
+		color: $mainColorGreen;
+		text-align: start;
+		@include adaptiveValue("font-size", 25, 20);
+		@include adaptiveValue("margin-top", 50, 30);
+		@include adaptiveValue("margin-bottom", 29, 10);
+	}
+	// .items__row
+	&__row {
+		//margin: 0 0 rem(28) 0px;
+		@include adaptiveValue("margin-bottom", 28, 10);
+	}
+	// .items__icon
+	&__icon {
+		font-size: rem(17);
+	}
+	// .items__data
+	&__data {
+		//font-size: rem(17);
+		line-height: math.div(22, 17);
+		font-weight: 600;
+		padding: 0 rem(40) 0 rem(20);
+		@include adaptiveValue("font-size", 17, 14);
+	}
+	// .items__text
+	&__text {
+		font-size: rem(15);
+		line-height: math.div(22, 15);
+		font-weight: 600;
+		text-align: start;
+		max-width: rem(440);
+		@include adaptiveValue("font-size", 15, 12);
+	}
+	// .items__subtitle
+	&__subtitle {
+		font-size: rem(17);
+		line-height: math.div(22, 17);
+		font-weight: 600;
+		padding: 0 rem(40) 0 rem(20);
+	}
+}
+// finish blog
+//=================================================
+//=============================================
+// start form contact
+.contact {
+	background-color: #222222;
+	@include adaptiveValue("padding-top", 128, 40);
+	@include adaptiveValue("padding-bottom", 219, 140);
+	margin: 0 auto;
+	// .contact__container
+	&__container {
+		$maxWidthContainer: 1032;
+	}
+	// .contact__content
+	&__content {
+		color: $mainColorText;
+	}
+	// .contact__body
+	&__body {
+	}
+	// .contact__header
+	&__header {
+		color: #fff;
+	}
+	// .contact__block-contact
+	&__block-contact {
+	}
+	// .contact__block-forms
+	&__block-forms {
+	}
+	// .contact__column
+	&__column {
+	}
+	// .contact__forms
+	&__forms {
+	}
+}
+
+.block-contact {
+	// .block-contact__row
+	&__row {
+	}
+	// .block-contact__col
+	&__col {
+		//font-size: rem(14);
+		flex: 0 1 33.333%;
+		padding: 0 rem(15);
+		/*добавим отступ между колонками ?*/
+		margin: 0 auto;
+		/*отступ по вертикали от текста иконок*/
+		@include adaptiveValue("margin-bottom", 80, 40);
+	}
+	// .block-contact__icon
+	&__icon {
+		/*отступ текста от иконки*/
+		margin: 0 auto;
+		@include adaptiveValue("margin-bottom", 40, 30);
+		/*зададим размеры иконке*/
+		width: rem(105);
+		height: rem(105);
+		/*зададим радиус иконки - круглая*/
+		border-radius: 50%;
+		/*определяем положение иконки*/
+		display: flex;
+		/*центрируем иконку*/
+		align-items: center;
+		justify-content: center;
+		background-color: $mainColorBlue;
+		&:hover {
+			transition: all 0.3s ease 0s;
+			background-color: #4e5ec2;
+			color: $mainColorWhite;
+		}
+		&:active {
+			top: rem(3);
+			box-shadow: 0 2px 0 $mainColorWhite;
+		}
+	}
+	&__link {
+		font-size: rem(62);
+		color: $mainColorWhite;
+		&_e {
+			font-size: rem(44);
+		}
+	}
+	// .block-contact__title
+	&__title {
+		font-size: rem(20);
+		line-height: rem(28);
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		/*margin: 0px 0px 78px 0px;*/
+		color: $mainColorWhite;
+		text-align: center;
+	}
+}
+
+.form-contacts * {
+	outline: none; // убираем линии внутри полей
+}
+
+.form-contacts {
+	max-width: rem(1032);
+	margin: 0 auto;
+	// .form-contacts__body
+	&__body {
+		position: relative;
+		font-size: rem(24);
+		line-height: rem(28);
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		color: $mainColorText;
+	}
+	// .form-contacts__row
+	&__row {
+		display: flex;
+		margin: 0 rem(-15);
+		flex-wrap: wrap;
+	}
+	// .form-contacts__column
+	&__column {
+		//padding: 0px 15px;
+		flex: 1 1 50%;
+		/*запрещаем увеличиваться, разрешем уменьшаться, устанвливаем одинаковую ширину*/
+		margin: 0 auto;
+		text-align: center;
+		justify-content: center;
+		// .form-contacts__column_3
+		&_3 {
+			flex: 0 1 100%;
+			padding: 0 rem(15);
+		}
+		@media (max-width: $mobile) {
+			flex: 0 1 100%;
+			//padding: 0 rem(15);
+		}
+	}
+	// .form-contacts__input
+	&__input {
+		margin: 0 rem(15) rem(33) rem(15);
+		border-radius: rem(10);
+		background-color: $mainColorWhite;
+		height: rem(84);
+		padding: rem(10);
+	}
+	// .form-contacts__name
+	&__name {
+		width: 100%;
+		padding: rem(15);
+		//background-color: red;;
+	}
+	// .form-contacts__req-email
+	&__req-email {
+		width: 100%;
+		padding: rem(15);
+	}
+	// .form-contacts__massage
+	&__massage {
+		width: 100%;
+		@include adaptiveValue("min-height", 323, 100);
+		border-radius: rem(10);
+		padding: 15px;
+		resize: vertical;
+	}
+	// .form-contacts__buttons
+	&__buttons {
+		position: absolute;
+		right: 0;
+		bottom: rem(-107);
+	}
+	// .form-contacts__button
+
+	&__button {
+		display: flex;
+		text-transform: uppercase;
+		min-height: 70px;
+		background-color: $mainColorWhite;
+		color: $mainColorText;
+		border-radius: 10px;
+		border: none;
+		padding: 0 rem(83);
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0 5px 0 #161b13;
+		position: relative;
+		top: 0;
+		&:hover {
+			color: $mainColorWhite;
+			background-color: $mainColorGreen;
+			border: none;
+		}
+		&:active {
+			top: 3px;
+			box-shadow: 0 2px 0 #161b13;
+		}
+	}
+}
+//finish form contact
+//=============================================

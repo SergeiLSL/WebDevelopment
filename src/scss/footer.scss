@@ -1,0 +1,23 @@
+//====================================================================================================
+//====================================================================================================
+.footer {
+	// .footer__container
+	&__container {
+		background-color: #fff;
+	}
+	// .footer__content
+	&__content {
+	}
+	// .footer__title
+	&__title {
+		font-family: "Roboto";
+		font-size: 20px;
+		line-height: 62px;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		text-align: center;
+	}
+}
+
+
+

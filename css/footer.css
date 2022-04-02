@@ -1,0 +1,12 @@
+.footer__container {
+  background-color: #fff;
+}
+
+.footer__title {
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 62px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
