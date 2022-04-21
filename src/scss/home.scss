@@ -820,7 +820,6 @@
 	}
 	// .contact__header
 	&__header {
-		color: #fff;
 	}
 	// .contact__block-contact
 	&__block-contact {
@@ -833,6 +832,17 @@
 	}
 	// .contact__forms
 	&__forms {
+	}
+}
+
+.header-contact {
+	// .begins__title
+	&__title {
+		color: $mainColorWhite;
+	}
+	// .begins__desc
+	&__desc {
+		color: $mainColorWhite;
 	}
 }
 

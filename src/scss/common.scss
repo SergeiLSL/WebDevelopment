@@ -15,47 +15,24 @@
 
 
 .title {
-	/*
+	color: $mainColorText;
 	font-size: rem(30);
 	line-height: rem(22);
 	font-weight: 700;
 	letter-spacing: 0.05em;
 	text-align: center;
-	margin: 0 0 rem(36) 0;
-	*/	
+	@include adaptiveValue("margin-bottom", 36, 20);	
 }
 
 .desc {
-	/*
-	max-width: rem(725);
-	font-size: 15px;
+	color: $mainColorText;
 	line-height: 22px;
 	letter-spacing: 0.05em;
-	text-align: center;
 	margin: 0 auto;
-	*/
-}
-
-.begins {
-	color:$mainColorText;
-	letter-spacing: 0.05em;
-	text-align: center;	
-	line-height: rem(22);	
-	// .header__title
-	&__title {
-		//color: #fff;
-		font-size: rem(30);
-		font-weight: 700;
-		@include adaptiveValue("margin-bottom", 36, 20);	
-	}
-	// .header__desk
-	&__desc {
-		margin: 0 auto;
-		max-width: rem(620);
-		font-size: 15px;
-		text-align: center;
-		@include adaptiveValue("margin-bottom", 127, 50);	
-	}
+	max-width: rem(620);
+	font-size: 15px;
+	text-align: center;
+	@include adaptiveValue("margin-bottom", 127, 50);	
 }
 
 .row {
