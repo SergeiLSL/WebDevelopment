@@ -15,7 +15,8 @@
 	//header__content
 	&__content {	
 		//max-width: rem(1122);	
-		padding: rem(30) 0 rem(30) 0;
+		@include adaptiveValue("padding-top", 30, 15);
+		@include adaptiveValue("padding-bottom", 30, 15);
 		margin: 0 auto;
 		display: flex;		
 		align-items: center;

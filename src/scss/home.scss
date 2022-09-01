@@ -1,6 +1,7 @@
 //=============================================
 // start main-block
 .inet {
+	// padding-top: rem(70);	
 	color: #fff;
 	font-weight: 500;
 	line-height: math.div(84, 72);
@@ -16,6 +17,13 @@
 			flex: 1 0 100%;
 			/*разрешаем увеличиваться и запрещаем уменьшаться картитнке*/
 		}
+		//margin-bottom: rem(10);
+	}
+
+	&__title {
+		@include adaptiveValue("padding-top", 30, 50);
+		// @include adaptiveValue("margin-bottom", 36, 36);
+		//margin-bottom: rem(36);
 	}
 	// .inet__text
 	&__text {
@@ -23,7 +31,8 @@
 		//background: rgba(0, 0, 0, 0);
 		width: 100%;
 		left: 50%;
-		top: 41%;
+		//top: 41%;
+		top: calc(480 / 1170 * 100%);
 		transform: translate(-50%, -41%);
 	}
 	&__title {
@@ -31,10 +40,11 @@
 		font-size: rem(60);
 		font-weight: 600;
 		//line-height: rem(22);
-		//margin-bottom: rem(55);
+		// margin-bottom: rem(55);
 		line-height: math.div(45, 22);
 		letter-spacing: 0.05em;
 		@include adaptiveValue("font-size", 60, 20);
+		// @include adaptiveValue("margin-bottom", 60, 20);
 	}
 	&__subtitle {
 		text-align: center;
@@ -50,11 +60,12 @@
 		position: absolute;
 		width: 100%;
 		left: 50%;
-		bottom: 27%;
+		// bottom: 27%;
+		bottom: calc(316 / 1170 * 100%);;
 		transform: translate(-50%, 27%);
 		justify-content: center;
 		@media (max-width: $mobile) {
-			bottom: 20%;
+			bottom: 18%;
 		}
 		@media (max-width: $mobileSmall) {
 			@include adaptiveValue("gap", 25, 15);

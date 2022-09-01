@@ -20,9 +20,7 @@
 	line-height: rem(22);
 	font-weight: 700;
 	letter-spacing: 0.05em;
-	text-align: center;
-	@include adaptiveValue("margin-bottom", 36, 20);	
-}
+	text-align: center;}
 
 .desc {
 	color: $mainColorText;
@@ -68,6 +66,7 @@
 	font-family: "Roboto";
 	text-align: center;
 	font-size: rem(20);
+	@include adaptiveValue("font-size", 20, 14);
 	line-height: math.div(22, 20);
 	letter-spacing: 0.05em;
 	font-weight: 700;
