@@ -433,6 +433,7 @@
 			@include adaptiveValue("padding-right", 240, 15);
 		}
 	}
+
 	// .prices__item
 	&__item {
 		background-color: #fff;
@@ -498,29 +499,22 @@
 		//@include adaptiveValue("margin-left", 91, 15);
 		//@include adaptiveValue("margin-right", 91, 15);
 	}
-	// .payment__column
-	&__column {
-		// .payment__column_1
-		&_1 {
+
+	&__price {
+		position: relative;
+		font-size: rem(50);
+		padding: rem(8) rem(10) rem(10) rem(7);
+		span {
+			font-size:rem(17);
+			margin-left: rem(5);
+		}
+		&::before {
+			content: "$";
+			position: absolute;
 			font-size: rem(25);
-			align-self: flex-start;
+			top: rem(0);
+			left: rem(-15);
 		}
-		// .payment__column_2
-		&_2 {
-			font-size: rem(50);
-			padding: rem(8) rem(10) rem(10) rem(7);
-		}
-		// .payment__column_3
-		&_3 {
-			align-self: flex-end;
-			font-size: rem(17);
-			padding: 0px 0px 0px 0px;
-		}
-	}
-	// .payment__item
-	&__item {
-		color: #fff;
-		text-align: center;
 	}
 	&__figure {
 		display: flex;
