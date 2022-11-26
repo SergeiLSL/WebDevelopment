@@ -931,10 +931,11 @@
 		display: flex;
 		margin: 0 rem(-15);
 		flex-wrap: wrap;
+		//gap: rem(10);
 	}
 	// .form-contacts__column
 	&__column {
-		//padding: 0px 15px;
+		padding: 0px 15px;
 		flex: 1 1 50%;
 		/*запрещаем увеличиваться, разрешем уменьшаться, устанвливаем одинаковую ширину*/
 		margin: 0 auto;
@@ -943,7 +944,7 @@
 		// .form-contacts__column_3
 		&_3 {
 			flex: 0 1 100%;
-			padding: 0 rem(15);
+			//padding: 0 rem(15);
 		}
 		@media (max-width: $mobile) {
 			flex: 0 1 100%;
@@ -952,7 +953,7 @@
 	}
 	// .form-contacts__input
 	&__input {
-		margin: 0 rem(15) rem(33) rem(15);
+		margin: 0 rem(0) rem(33) rem(0);
 		border-radius: rem(10);
 		background-color: $mainColorWhite;
 		height: rem(84);
